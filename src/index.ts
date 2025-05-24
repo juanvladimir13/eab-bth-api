@@ -3,7 +3,7 @@ import { especialidadRouter } from "./routes/especialidad.route";
 Bun.serve({
   port: 8080,
   routes: {
-    "/api/version": () => Response.json({ version: "1.0.0" }),
+    "/api/version": () => Response.json({ version: "0.1.3" }),
     ...especialidadRouter,
   },
   error(error) {

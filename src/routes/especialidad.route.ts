@@ -1,20 +1,38 @@
 import type { BunRequest } from "bun";
 
-import { especialidadById, especialidadesList, especialidadStore } from "../controllers/especialidad.controller";
+import { especialidadFindById, especialidadesList, especialidadStore, especialidadDeleteById, especialidadUpdate, especialidadesListAreaById } from '../controllers/especialidad.controller';
+import { loadData } from "../middleware";
 
 export const especialidadRouter = {
   "/api/especialidad": {
     GET: () => {
       return especialidadesList();
     },
-    
-    POST: async (req: BunRequest) => {
-      return especialidadStore(req);
+
+    POST: async (request: BunRequest) => {
+      const requestData = await loadData(request);
+      return especialidadStore(requestData);
     },
   },
+  "/api/especialidad/:id": {
+    DELETE: (request: BunRequest) => {
+      const id = request.params.id ?? 0;
+      return especialidadDeleteById(id);
+    },
 
-  "/api/especialidad/:id": (req: BunRequest) => {
-    const id = req.params.id ?? 0 ;
-    return especialidadById(id);
+    GET: (request: BunRequest) => {
+      const id = request.params.id ?? 0;
+      return especialidadFindById(id);
+    },
+
+    PUT: async (request: BunRequest) => {
+      const id = request.params.id ?? 0;
+      const requestData = await loadData(request);
+      return especialidadUpdate({ ...requestData, id });
+    },
+  },
+  "/api/especialidad/area/:id": (request: BunRequest) => {
+    const id = request.params.id ?? 0;
+    return especialidadesListAreaById(id);
   }
 };
