@@ -1,7 +1,7 @@
 import { especialidadRouter } from "./routes/especialidad.route";
 
 Bun.serve({
-  port: 8080,
+  port: 3000,
   routes: {
     "/api/version": () => Response.json({ version: "0.1.3" }),
     ...especialidadRouter,
