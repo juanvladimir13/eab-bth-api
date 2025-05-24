@@ -1,0 +1,18 @@
+{
+  "name": "eab-api-bth",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --watch run src/index.ts",
+    "production": "bun build --compile --minify --sourcemap src/index.ts --outfile dist/production",
+    "build": "bun build --compile src/index.ts --outfile dist/compile",
+    "bytecode": "bun build --compile --minify --sourcemap --bytecode src/index.ts --outfile dist/bytecote"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
