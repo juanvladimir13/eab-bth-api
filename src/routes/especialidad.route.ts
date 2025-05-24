@@ -2,7 +2,7 @@ import type { BunRequest } from "bun";
 
 import { especialidadById, especialidadesList, especialidadStore } from "../controllers/especialidad.controller";
 
-export const estudianteRouter = {
+export const especialidadRouter = {
   "/api/especialidad": {
     GET: () => {
       return especialidadesList();
