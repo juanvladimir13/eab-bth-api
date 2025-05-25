@@ -1,7 +1,7 @@
 # eab-api-bth
 
 
-## 🚀 Guía de Instalación y Ejecución de un Proyecto con Bun.sh
+## Guía de Instalación y Ejecución de un Proyecto con Bun.sh 🚀
 
 Sigue estos pasos para configurar y ejecutar un proyecto basado en Bun.sh.
 
@@ -14,7 +14,8 @@ Abre tu terminal de PowerShell y ejecuta el siguiente comando:
 powershell -c "irm bun.sh/install.ps1|iex"
 ```
 
-Si tienes dificultades para instalar seguir las siguientes instrucciones de https://bun.sh/docs/installation#windows
+Si tienes dificultades para instalar, sigue las siguientes instrucciones ... [click aqui](https://bun.sh/docs/installation#windows)
+
 
 ### 2. 📥 Descargar el Repositorio desde GitHub como ZIP
 
@@ -35,7 +36,7 @@ Si tienes dificultades para instalar seguir las siguientes instrucciones de http
 ### 5. 🌐 Abrir el Proyecto en el Navegador
 
 - Abre tu navegador preferido.
-- Ve a la dirección: `http://localhost:3000`.
+- Ve a la dirección: [http://localhost:3000](http://localhost:3000).
 - Recomendado: Google Chrome para mejor compatibilidad.
 
 ---

@@ -3,6 +3,15 @@ import { especialidadRouter } from "./routes/especialidad.route";
 Bun.serve({
   port: 3000,
   routes: {
+    "/": () => Response.json({
+      proyecto: "Web API de practica del Modulo Tecnologico Productivo",
+      endpoits: [
+        "/api/version",
+        "/api/especialidad",
+        "/api/especialidad/1",
+        "/api/especialidad/area/3"
+      ]
+    }),
     "/api/version": () => Response.json({ version: "0.1.3" }),
     ...especialidadRouter,
   },
