@@ -1,7 +1,8 @@
 import { especialidadRouter } from "./routes/especialidad.route";
+const PORT = Bun.env.PORT || 3001;
 
 Bun.serve({
-  port: 3000,
+  port: PORT,
   routes: {
     "/": () => Response.json({
       proyecto: "Web API de practica del Modulo Tecnologico Productivo",
