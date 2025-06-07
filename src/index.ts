@@ -1,5 +1,5 @@
 import { especialidadRouter } from "./routes/especialidad.route";
-const PORT = Bun.env.PORT || 3001;
+const PORT = Bun.env.PORT || 3000;
 
 Bun.serve({
   port: PORT,

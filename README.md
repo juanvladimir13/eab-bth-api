@@ -19,25 +19,25 @@ Si tienes dificultades para instalar, sigue las siguientes instrucciones en <a h
 
 ### 2. 📥 Descargar el Repositorio desde GitHub como ZIP
 
-- Haz clic en el botón verde **"Code"**.
-- Selecciona **"Download ZIP"**.
-- Extrae el archivo ZIP en una carpeta de tu elección.
+- Haz clic en el botón verde **"Code"**
+- Selecciona **"Download ZIP"**
+- Extrae el archivo ZIP en una carpeta de tu elección
 
 ### 3. 🧰 Instalar Dependencias
 
-- Abre la terminal.
-- Navega a la carpeta del proyecto descomprimido. Ejemplo: `cd ~/Descargas/mi-proyecto`.
-- Ejecuta: `bun install`.
+- Abre la terminal
+- Navega a la carpeta del proyecto descomprimido. Ejemplo: `cd Descargas/eab-bth-api-main`
+- Ejecuta: `bun install`
 
 ### 4. 🚀 Ejecutar el Proyecto
 
-- Ejecuta el comando: `bun run dev`.
+- Ejecuta el comando: `bun run dev`
 
 ### 5. 🌐 Abrir el Proyecto en el Navegador
 
-- Abre tu navegador preferido.
-- Ve a la dirección: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> .
-- Recomendado: Google Chrome para mejor compatibilidad.
+- Abre tu navegador preferido
+- Ve a la dirección: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+- Recomendado: Google Chrome para mejor compatibilidad
 
 ---
 
