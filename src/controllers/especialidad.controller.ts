@@ -1,4 +1,5 @@
-import { deleteById, findById, listAll, listAllByAreaId, store, update } from "../models/especialidad.model";
+import type { IEspecialidad } from "@datatypes/datatypes";
+import { deleteById, findById, listAll, listAllByAreaId, store, update } from "@models/especialidad.model";
 
 export const especialidadesList = () => {
   const especialidades = listAll();
@@ -15,7 +16,7 @@ export const especialidadFindById = (id: number) => {
   return Response.json(especialidad);
 }
 
-export const especialidadStore = (request: any) => {
+export const especialidadStore = (request: IEspecialidad) => {
   try {
     const especialidad = store(request);
     return Response.json(especialidad, { status: 201 });
@@ -25,7 +26,7 @@ export const especialidadStore = (request: any) => {
   }
 }
 
-export const especialidadUpdate = (request: any) => {
+export const especialidadUpdate = (request: IEspecialidad) => {
   try {
     const especialidad = update(request);
     return Response.json(especialidad, { status: 200 });

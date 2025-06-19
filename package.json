@@ -2,7 +2,23 @@
   "name": "eab-api-bth",
   "module": "index.ts",
   "type": "module",
+  "version": "0.1.3",
+  "description": "project skeleton astro",
+  "author": {
+    "name": "Juan Vladimir",
+    "email": "juanvladimir13@gmail.com",
+    "url": "https://juanvladimir13.web.app"
+  },
+  "homepage": "https://juanvladimir13.web.app",
+  "license": "MIT",
   "private": true,
+  "keywords": [
+    "astro",
+    "bun",
+    "template",
+    "web",
+    "frontend"
+  ],
   "scripts": {
     "dev": "bun --watch run src/index.ts",
     "production": "bun build --compile --minify --sourcemap src/index.ts --outfile dist/production",
@@ -13,6 +29,17 @@
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.20.8",
+    "bun": ">=1.2.0"
+  },
+  "packageManager": "bun@1.2.0",
+  "devEngines": {
+    "packageManager": {
+      "name": "bun",
+      "version": ">=1.2.0"
+    }
   }
 }

@@ -1,17 +1,18 @@
-import { db } from "../database";
+import { db } from "@base/database";
+import type { IEspecialidad } from "@datatypes/datatypes";
 
-export const listAll = () => {
-  const especialidades = db.query("SELECT * FROM especialidad").all();
+export const listAll = (): IEspecialidad[] => {
+  const especialidades = db.query("SELECT * FROM especialidad").all() as IEspecialidad[];
   return especialidades;
 }
 
-export const findById = (id: number = 0) => {
+export const findById = (id: number = 0): IEspecialidad | unknown => {
   const especialidad = db.query("SELECT * FROM especialidad WHERE id = ?").get(id);
   return especialidad;
 }
 
-export const store = (especialidad: any) => {
-  const { nombre = '', area_productiva_id = 0 } = especialidad;
+export const store = (especialidad: IEspecialidad): IEspecialidad | unknown => {
+  const { nombre = '', areaProductivaId: area_productiva_id = 0 } = especialidad;
 
   const changes = db.query(
     `INSERT INTO especialidad (nombre, area_productiva_id)
@@ -26,8 +27,8 @@ export const store = (especialidad: any) => {
   return findById(id);
 }
 
-export const update = (especialidad: any) => {
-  const { id = 0, nombre = '', area_productiva_id = 0 } = especialidad;
+export const update = (especialidad: IEspecialidad): IEspecialidad | unknown => {
+  const { id = 0, nombre = '', areaProductivaId: area_productiva_id = 0 } = especialidad;
 
   const changes = db.query(
     `UPDATE especialidad

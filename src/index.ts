@@ -1,4 +1,4 @@
-import { especialidadRouter } from "./routes/especialidad.route";
+import { especialidadRouter } from "@routes/especialidad.route";
 const PORT = Bun.env.PORT || 3000;
 
 Bun.serve({
@@ -21,3 +21,5 @@ Bun.serve({
     return new Response("Internal Server Error", { status: 500 });
   },
 });
+
+console.log(`Server is running on http://localhost:${PORT}`);
